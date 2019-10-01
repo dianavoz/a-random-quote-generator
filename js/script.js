@@ -2,6 +2,7 @@
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
+// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
 /*It creates an app that displays random famous quotes each time the "Show another quote" button is clicked.
   The event listener below will be triggered, and it will call, or "invoke", the `printQuote` 
@@ -60,8 +61,8 @@ function printQuote() {
 	if (printRandom.year) {
 		listQuote += '<span class="year">' + printRandom.year + '</span>';
 	}
-  if (printRandom.tag) {
-		listQuote += '<span class="year">' + printRandom.tag + '</span>';
+    if (printRandom.tag) {
+		listQuote += '<span class="tag">' + ', '+ printRandom.tag + '</span>';
 	}
 	listQuote += '</p>';
 	document.getElementById('quote-box').innerHTML = listQuote;
@@ -70,7 +71,7 @@ function printQuote() {
 }
 
   
-//clear timer interval when button is pressed and then reset the timer again  
+//clears the timer interval when button is pressed and then reset the timer again  
 clearInterval(interval);
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
