@@ -62,7 +62,7 @@ if (printRandom.year) {
 	listQuote += '<span class="year">' + printRandom.year + '</span>';
 }
 if (printRandom.tag) {
-	listQuote += '<span class="tag">' + ', ' + printRandom.tag + '</span>';
+	listQuote += '<span class="tag">' + printRandom.tag + '</span>';
 }
 listQuote += '</p>';
 document.getElementById('quote-box').innerHTML = listQuote;
