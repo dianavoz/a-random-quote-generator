@@ -15,7 +15,7 @@ var quotes = [{
 	{
 		quote: 'Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.',
 		source: 'Thomas A. Edison',
-    tag: 'Wisdom'
+        tag: 'Wisdom'
 	},
 	{
 		quote: 'If you can dream it, you can do it.',
@@ -35,7 +35,7 @@ var quotes = [{
 	{
 		quote: 'Our lives are defined by opportunities, even the ones we miss.',
 		source: 'Benjamin Button',
-    tag: 'Wisdom'
+        tag: 'Wisdom'
 	}
 ];
 
