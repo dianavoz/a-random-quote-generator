@@ -13,7 +13,8 @@ var quotes = [{
 	},
 	{
 		quote: 'Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.',
-		source: 'Thomas A. Edison'
+		source: 'Thomas A. Edison',
+    tag: 'Wisdom'
 	},
 	{
 		quote: 'If you can dream it, you can do it.',
@@ -32,29 +33,35 @@ var quotes = [{
 	},
 	{
 		quote: 'Our lives are defined by opportunities, even the ones we miss.',
-		source: 'Benjamin Button'
+		source: 'Benjamin Button',
+    tag: 'Wisdom'
 	}
 ];
 
 
-//Get the random number between 0 and the length of the array
+/*Get the random number between 0 and the length of the array
+  The function will return the quotes array*/
 function getRandomQuote() {
-	return Math.floor(Math.random() * quotes.length);
+  var newRandom = Math.floor(Math.random() * quotes.length);
+  return quotes[newRandom];
+
 }
 
 
 //The function creates a string with random quotes and displays it in the div with id  'quote-box'
 function printQuote() {
 	var printRandom = getRandomQuote();
-	var newRandom = quotes[printRandom];
 	var listQuote = '';
-	listQuote += '<p class="quote">' + newRandom.quote + '</p>';
-	listQuote += '<p class="source">' + newRandom.source;
-	if (newRandom.citation) {
-		listQuote += '<span class="citation">' + newRandom.citation + '</span>';
+	listQuote += '<p class="quote">' + printRandom.quote + '</p>';
+	listQuote += '<p class="source">' + printRandom.source;
+	if (printRandom.citation) {
+		listQuote += '<span class="citation">' + printRandom.citation + '</span>';
 	}
-	if (newRandom.year) {
-		listQuote += '<span class="year">' + newRandom.year + '</span>';
+	if (printRandom.year) {
+		listQuote += '<span class="year">' + printRandom.year + '</span>';
+	}
+  if (printRandom.tag) {
+		listQuote += '<span class="year">' + printRandom.tag + '</span>';
 	}
 	listQuote += '</p>';
 	document.getElementById('quote-box').innerHTML = listQuote;
@@ -63,7 +70,7 @@ function printQuote() {
 }
 
   
-//Ends the interval for 30 seconds 
+//clear timer interval when button is pressed and then reset the timer again  
 clearInterval(interval);
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
@@ -83,8 +90,8 @@ function getColors() {
 	document.body.style.background = bgColor;
 }
 
-//Sets the interval for 30 seconds
-var interval = setInterval(printQuote, 30000);
+//Sets the interval to change the quote every 20 seconds
+var interval = setInterval(printQuote, 20000);
 
 
 
