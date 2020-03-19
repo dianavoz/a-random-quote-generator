@@ -1,2 +1,2 @@
-# A_Random_Quote_Qenerator
+# A Random Quote Generator
  Techdegree Project 1
